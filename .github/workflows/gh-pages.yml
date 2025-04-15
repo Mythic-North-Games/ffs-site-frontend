@@ -26,5 +26,11 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: 🏗️ Build and Deploy to GitHub Pages
+      - name: 🧑‍💻 Configure Git identity
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: 🚀 Deploy to GitHub Pages
         run: pnpm run deploy
+

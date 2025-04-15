@@ -1,4 +1,4 @@
-name: Quality Check
+name: ✅ Quality Check
 
 on:
   push:
@@ -11,28 +11,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: 📥 Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: 'pnpm'
 
-      - name: Install deps
+      - name: 🔗 Install pnpm
+        run: npm install -g pnpm
+
+      - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: Lint
+      - name: 🧹 Run ESLint
         run: pnpm run lint
 
-      - name: Format Check
+      - name: 🎨 Check code formatting (Prettier)
         run: pnpm exec prettier --check "src/**/*.{ts,html,scss}"
 
-      - name: Test + Coverage + Threshold
+      - name: 🧪 Run unit tests + coverage + threshold
         run: pnpm run test:coverage
 
-      - name: Upload coverage report
+      - name: 📤 Upload coverage report
         if: success()
         uses: actions/upload-artifact@v4
         with:

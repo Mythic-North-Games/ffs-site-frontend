@@ -33,4 +33,6 @@ jobs:
 
       - name: 🚀 Deploy to GitHub Pages
         run: pnpm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

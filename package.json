@@ -14,7 +14,7 @@
     "lint:fix": "eslint . --ext .ts,.html --fix",
     "format": "prettier --write \"src/**/*.{ts,html,scss}\"",
     "prepare": "husky install",
-    "deploy": "ng deploy"
+    "deploy": "ng deploy --no-silent --name='GitHub Actions' --email='actions@github.com' --repo=https://x-access-token:${GITHUB_TOKEN}@github.com/Mythic-North-Games/ffs-site-frontend.git"
   },
   "lint-staged": {
     "*.{ts,html,scss}": [

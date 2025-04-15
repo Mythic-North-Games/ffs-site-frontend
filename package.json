@@ -14,7 +14,7 @@
     "lint:fix": "eslint . --ext .ts,.html --fix",
     "format": "prettier --write \"src/**/*.{ts,html,scss}\"",
     "prepare": "husky install",
-    "deploy": "ng deploy --base-href=/ffs-site-frontend/"
+    "deploy": "ng deploy"
   },
   "lint-staged": {
     "*.{ts,html,scss}": [

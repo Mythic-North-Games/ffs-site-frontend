@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,8 +21,5 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: 🏗️ Build Angular app
-        run: pnpm run build -- --configuration production
-
-      - name: 🚀 Deploy to GitHub Pages
+      - name: 🏗️ Build and deploy
         run: pnpm run deploy

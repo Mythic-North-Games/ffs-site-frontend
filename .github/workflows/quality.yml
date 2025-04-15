@@ -43,3 +43,9 @@ jobs:
         with:
           name: coverage-report
           path: coverage/
+
+      - name: 📤 Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          files: ./coverage/ffs-site-frontend/lcov.info
+          token: ${{ secrets.CODECOV_TOKEN }}

@@ -85,6 +85,9 @@
             "scripts": [],
             "karmaConfig": "./karma.conf.cjs"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

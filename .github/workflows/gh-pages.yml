@@ -12,17 +12,19 @@ jobs:
       - name: 📥 Checkout repository
         uses: actions/checkout@v3
 
-      - name: 🧰 Setup Node
+      - name: 🔧 Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: 'pnpm'
 
-      - name: 🔗 Install pnpm
-        run: npm install -g pnpm
-
       - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: 🏗️ Build and deploy
+      - name: 🏗️ Build and Deploy to GitHub Pages
         run: pnpm run deploy

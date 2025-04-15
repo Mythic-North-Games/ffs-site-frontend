@@ -10,7 +10,9 @@
 ![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 ![ESLint](https://img.shields.io/badge/linting-eslint-blue.svg)
 [![Deploy GitHub Pages](https://img.shields.io/github/deployments/Mythic-North-Games/ffs-site-frontend/github-pages?label=github%20pages)](https://mythic-north-games.github.io/ffs-site-frontend/)
-![Quality Check](https://github.com/Mythic-North-Games/ffs-site-frontend/actions/workflows/quality.yml/badge.svg)
+![Quality Check](https://github.com/Mythic-North-Games/ffs-site-frontend/actions/workflows/quality.yml/badge.svg?branch=main)
+[![codecov](https://codecov.io/gh/Mythic-North-Games/ffs-site-frontend/branch/main/graph/badge.svg)](https://codecov.io/gh/Mythic-North-Games/ffs-site-frontend)
+
 
 ---
 
